@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+    <head>
+    
+    <!--
+       UNDEADCORVID (ᛚᛟᚲᛖ)
+       THEME 002: HELIUM
+       
+       01. don't redistribute
+       02. don't take snippets or steal code
+       03. don't remove my credit
+       04. editing for personal use allowed
+       05. helium is not a base code
+       06. support @ undeadcorvid
+       07. i DO NOT support highly edited versions of helium
+       
+       credits: 
+       
+       nexa font - http://www.fontfabric.com/nexa-free-font/
+       font awesome - https://fontawesome.com/
+       isotope - https://isotope.metafizzy.co/
+	   magnusthemes - http://magnusthemes.tumblr.com/
+       rick moby - https://www.emojione.com/
+       
+    -->
+    
+            <meta charset="utf-8">
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <meta name="description" content="{MetaDescription}" />
+        
+
+        <!-- LIBRARIES -->
+        
+        <!--Font Awesome -->
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <!-- Emojione -->
+        
+        <script src="//cdn.jsdelivr.net/emojione/2.0.0/lib/js/emojione.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/2.0.0/assets/css/emojione.min.css"/>
+        
+        <!--Jquery-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        
+        <!--Jquery UI/Tooltips -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <!-- Isotope -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+ 
+        <style type="text/css">
+        
+        /* COMPATABILITY AND PLUGIN SETTINGS */
+        
+            body, html {
+                margin: 0;
+                }
+               
+            img.emojione {  
+            margin: 0px !important;
+            display: inline !important;
+            vertical-align: middle;
+                }
+               
+            #tumblr_controls, .tmblr-iframe {
+                z-index:999999999999999999!important;
+                -webkit-filter:invert(100%);
+                -moz-filter:invert(100%);
+                -o-filter:invert(100%);
+                -ms-filter:invert(100%);
+                filter:invert(100%);
+                position:fixed!important;
+                right:20px!important;
+                top:60px!important;
+                opacity:.5;
+                -webkit-transition:all 0.6s ease-out;
+                -webkit-transition: opacity 0.7s linear;
+                opacity: 0.2;
+                -webkit-transition: all 0.8s ease-out;
+                -moz-transition: all 0.8s ease-out;
+                transition: all 0.8s ease-out
+            }
+             
+            #tumblr_controls, .tmblr-iframe:hover {
+                opacity:.9;
+                webkit-transition: all 0.4s ease-out;
+                -moz-transition: all 0.4s ease-out;
+                transition: all 0.4s ease-out;
+                -webkit-transition:all 0.6s ease-out;
+                -webkit-filter:invert(80%);
+                -moz-filter:invert(80%);
+                -o-filter:invert(80%);
+                -ms-filter:invert(80%);
+                filter:invert(80%);
+            }
+            
+            @font-face {
+                font-family: 'Nexa Bold';
+                src: url('https://static.tumblr.com/h6iabvf/6ukpg851a/nexa_bold.otf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+            @font-face {
+                font-family: 'Nexa Light';
+                src: url('https://static.tumblr.com/h6iabvf/5Yepg851a/nexa_light.otf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+                    /* WIREFRAME */
+        
+            body {
+                font-family: 'Nexa Light';
+                font-size: 15px;
+            }
+        
+            header {
+                position: fixed;
+                height: 50px; width: 100vw;
+                color: #fff;
+                background-color: #000;
+                z-index: 50;
+                line-height: 50px;
+                padding-left: 50px;
+                font-size: 25px;
+                font-family: 'Nexa Bold';
+                text-transform: uppercase;
+            }
+            
+            sidebar {
+                margin-top: 50px;
+                position: fixed;
+                display: block;
+                height: 100vh; width: 350px;
+                padding: 25px;
+            }
+            
+            #content {
+                position: fixed;
+                max-width: calc(100vw - 450px); 
+                height: calc(100vh - 200px)!important;
+                margin: 0px 0px 0px 350px;
+                display: block;
+                overflow-y: scroll;
+                background-color: #f2f2f2;
+                padding: 100px 50px;
+            }
+            
+            a {
+                color: #000;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            
+                    /* SCROLLBAR AND TOOLTIPS */
+       
+            ::-webkit-scrollbar {
+              width: 5px;
+              height: 2px;
+            }
+            ::-webkit-scrollbar-button {
+              width: 0px;
+              height: 0px;
+            }
+            ::-webkit-scrollbar-thumb {
+              background: #F8415C;
+              border-radius: 50px;
+            }
+            ::-webkit-scrollbar-thumb:active {
+              background: #FF677E;
+            }
+            ::-webkit-scrollbar-track {
+              background: #fff;
+              border-radius: 50px;
+            }
+            ::-webkit-scrollbar-corner {
+              background: transparent;
+            }
+             
+            .mytooltip {
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0)!important;
+                color: {color:Navigation Text}!important;
+                background-color: {color:Navigation}!important;
+                border: none!important;
+                font-family: 'Nexa Light';
+                font-size: 16px;
+                margin: 10px;
+              }
+              
+
+                    /* HEADER NAVIGATION */
+              
+            header ul {
+                list-style: none;
+                position: absolute;
+                top: -24px;
+                right: 70px;
+                padding: 0px;
+            }
+            
+            header ul li { 
+                display: inline-block;
+                padding: 0px 10px;
+                color: #fff;
+            }
+            
+            header ul li a {
+                color: #fff;
+            }
+            
+            header ul li a:hover {
+                color: #E6E6E6;
+            }
+            
+            header ul li a:active {
+                color: #585858;
+            }
+            
+        
+
+                    /* SIDEBAR & FILTERS */
+            
+            .filters {
+                overflow-y: scroll;
+                max-height: calc(100vh - 150px);
+                width: 250px;
+                padding: 25px;
+            }
+            
+            .filters ul {
+                list-style: none;
+                width: 250px;
+                padding: 0px;
+                overflow: hidden;
+            }
+            
+            .filters b {
+                font-size: 20px;
+            }
+            
+            .filters ul li a { 
+                display: block;
+                margin: 0px;
+                background-color: #f2f2f2;
+                padding: 5px;
+                color: #000;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            
+            .filters .selected { 
+                background-color: #F8415C;
+            }
+            
+            
+            
+
+                    /* CARDS */
+            
+            .card {
+                margin: 30px;
+                background-color: #fff;
+                padding: 30px;
+                box-shadow: 10px 10px 0px -1px rgba(196,196,196,1);
+            }
+            
+
+                    /* CARD HEADERS */
+            
+            .cardheader {
+                height: 50px; width: 100%;
+                background-color: #050505; 
+            }
+            
+            .fav .cardheader {
+                background-color: #73D699!important; 
+            }
+            
+            .new .cardheader {
+                background-color: #F8415C!important; 
+            }
+            
+            .card img {
+                padding: 30px 30px 0px 30px;
+            }
+            
+            .headerhalf {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 50px 550px;
+                border-color: transparent transparent rgba(255,255,255,0.2) transparent;
+            }
+            
+            .headertext {
+                font-family: 'Nexa Bold';
+                position: relative;
+                height: 50px; width: 550px;
+                color: #f2f2f2;
+                margin: -50px 0px;
+                text-align: center;
+                line-height: 50px;
+                text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+                text-transform: uppercase;
+            }
+            
+
+                    /* CARD TEXT */
+            
+            .information {
+                height: 180px; width: 250px;
+                display: block;
+                position: absolute;
+                margin: 30px 30px 0px 30px;
+                margin: -322px 290px;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            .information ul {
+                text-align: left;
+                padding: 0px 0px 20px 20px;
+                list-style: none;
+                text-align: center;
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+            }
+            
+            .info {
+                font-family: 'Nexa Bold';
+            }
+            
+            .info:after {
+                content: ':';
+            }
+            
+
+                    /* CARD NAVIGATION */
+            
+            .buttons {
+                margin: -50px 290px;
+                position: absolute;
+                list-style: none;
+                height: 30px; width: 260px;
+                line-height: 30px;
+                text-align: center;
+                padding: 0px;
+            }
+            
+            .buttons li {
+                display: inline-block;
+                margin: 0px 10px;
+            }
+            
+            .buttons a {
+                color: #151515;
+            }
+            
+            .buttons a:hover {
+                color: #610b38;
+            }
+            
+                    /* CREDITS: DO NOT REMOVE */
+ 
+            .credit {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+            }
+             
+            .credit a {
+                border: 1px solid #000;
+                color: #000;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+                display: block;
+                text-align: center;
+            }
+             
+            .credit a:hover {
+                text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+            }
+                
+        </style>
+        
+                 <!-- EMOJIONE -->
+                 
+        <script>
+            $(window).load(function(){
+                function convert() {
+                    var input = document.body.innerHTML;
+                    var output = emojione.unicodeToImage(input);
+                    document.body.innerHTML = output;
+                  }
+            convert();
+            });
+        </script>
+        
+            <!-- TOOLTIP -->
+         <script>
+                $(document).ready(function() {
+                   $( document ).tooltip({
+                    track: true,
+                    tooltipClass: "mytooltip",
+                });
+            });
+         </script>
+         
+         <script>
+            $(document).ready(function() {
+             var $container = $("#content"); // the container with all the elements to filter inside
+             var filters = {}; //should be outside the scope of the filtering function
+             /* --- read the documentation on isotope.metafizzy.co for more options --- */
+             var $grid = $container.isotope({
+               itemSelector: ".card", // the elements to filter
+               percentPosition: false // put true if you use percentage widths, otherwise put false
+             });
+                $(".option-set a").click(function(e) {
+                   var $this = $(this); // cache the clicked link
+                   var filterAttr = "data-filter-value";
+                   var filterValue = $this.attr(filterAttr); // cache the filter
+                   var $optionSet = $this.parents(".option-set"); // cache the parent element
+                   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
+                   var filterGroup = filters[group];
+                   if (!filterGroup) {
+                     filterGroup = filters[group] = []; 
+                   }
+                   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+                   var activeClass = "selected", // the class for active links
+                     exclClass = "exclusive"; // the class for exclusive groups
+                 comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+                   var comboFilter = getComboFilter(filters);
+                   $grid.isotope({
+                     filter: comboFilter
+                   });
+                   $this.toggleClass(activeClass);
+                   e.preventDefault();
+                });
+            });
+</script>
+    </head>
+    
+    
+    <body>
+    
+        <div class="credit">
+            <a href="http://undeadcorvid.tumblr.com/" title="undeadcorvid">ᛚᛟᚲᛖ</a>
+        </div>
+    
+        <header>
+            undeadcorvid's OCs
+            
+                <ul> 
+                    <li> <a href="/"><i class="fas fa-home"></i></a> </li>
+                    <li> <a href="/ask"><i class="fas fa-comments"></i></a> </li>
+                    <li> <a href="http://tumblr.com/"><i class="fas fa-columns"></i></a> </li>
+                </ul>
+        </header>
+        
+        
+        <sidebar>
+           <div class="filters">
+            <ul class="filter option-set inclusive" data-filter-group="info">
+              <li><a href="#" data-filter-value="" class="selected">All</a></li>
+              <li><a href="#" data-filter-value=".fav">Favourite</a></li>
+              <li><a href="#" data-filter-value=".new">New</a></li>
+            </ul>
+            
+                <b>FILTER GROUP A</b>
+            <ul class="filter option-set exclusive" data-filter-group="A">
+             <li><a href="#" data-filter-value="" class="selected">All</a></li>
+             <li><a href="#" data-filter-value=".a1">A1</a></li>
+             <li><a href="#" data-filter-value=".a2">A2</a></li>
+             <li><a href="#" data-filter-value=".a3">A3</a></li>
+            </ul>
+            
+                <b>FILTER GROUP B</b>
+            <ul class="filter option-set exclusive" data-filter-group="B">
+             <li><a href="#" data-filter-value="" class="selected">All</a></li>
+             <li><a href="#" data-filter-value=".b1">B1</a></li>
+             <li><a href="#" data-filter-value=".b2">B2</a></li>
+             <li><a href="#" data-filter-value=".b3">B3</a></li>
+            </ul>
+            
+                <b>FILTER GROUP C</b>
+            <ul class="filter option-set exclusive" data-filter-group="C">
+             <li><a href="#" data-filter-value="" class="selected">All</a></li>
+             <li><a href="#" data-filter-value=".c1">C1</a></li>
+             <li><a href="#" data-filter-value=".c2">C2</a></li>
+             <li><a href="#" data-filter-value=".c3">C3</a></li>
+            </ul>
+            
+           </div>
+
+        </sidebar>
+        
+        
+        <div id="content">
+        
+<!---------------------------- BEGINNING OF CARDS ----------------------------->        
+
+<!------------ CARD ------------>
+            
+            <div class="card a1 b2 c3">
+                <div class="cardheader"> 
+                    <div class="headerhalf"></div>
+                    <div class="headertext"> - the epitaph - </div>
+                </div>
+                
+                <img src="https://66.media.tumblr.com/1a63c08328deb5ea6edcedb8bba199c4/tumblr_inline_pfo5hckjFx1v3uyoe_1280.png"/>
+                
+                <div class="information">
+                    <ul>
+                        <li> <span class="info">Name</span> name </li>
+                        <li> <span class="info">Gender</span> gender </li>
+                        <li> <span class="info">Fandom</span> fandom </li>
+                        <li> [ <i>class</i> ] </li>
+                    </ul>
+                        
+                        a short description with no scrollbar, so <i>brevity is the soul of wit</i>, and all that
+                    
+                </div>
+                
+                <ul class="buttons">
+                    <li> <a href="" title="Biography"><i class="fas fa-address-card"></i></a> </li>
+                    <li> <a href="" title="Tag"><i class="fas fa-hashtag"></i></a> </li>
+                    <li> <a href="" title="Alternative Universes"><i class="fas fa-code-branch"></i></a> </li>
+                    <li> <a href="" title="Pinterest"><i class="fab fa-pinterest"></i></a> </li>
+                </ul>
+            </div>
+            
+             
+
+<!------------------------------- END OF CARDS -------------------------------->
+            
+          
+        </div>
+    </body>
+</html>
