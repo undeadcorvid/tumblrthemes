@@ -1,0 +1,210 @@
+<!doctype html>
+ 
+<!--
+    UNDEADCORVID (ᛚᛟᚲᛖ)
+    THEME 003: LITHIUM
+    
+    01. don't redistribute unaltered
+    02. don't remove my credit
+    03. all editing for personal use allowed
+    04. lithium is a base code and may only be rereleased as a full theme with explicit credit
+    
+-->
+ 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <meta name="description" content="{MetaDescription}" />
+            
+            
+        <style type="text/css">
+        
+                /* COMPATABILITY AND PLUGIN SETTINGS */
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+html, body {
+    max-height: 100vh; max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    }
+    
+div {
+    box-sizing: border-box;
+    display: block;
+}
+
+figure {
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+/* I recommend wrapping photosets, videos and audio players with the <figure> tag, which should manage their ability to shrink and stretch. This code is a failsafe for unwrapped sections but is by no means the most holistic solution. */
+
+img, video, canvas {
+  max-width: 100%;
+    height: auto;
+}
+
+iframe {
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+} 
+
+                /* WIREFRAME */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 18px;
+    background: #f2f2f2;
+
+}
+
+footer {
+    height: 100px;
+    flex-shrink: 0;
+    color: #f2f2f2;
+    background-color: #000;
+    padding: 0 20px;
+    line-height: 50px;
+}
+
+header {
+    height: 50px;
+    flex-shrink: 0;
+    color: #f2f2f2;
+    background-color: #000;
+    padding: 0 20px;
+    line-height: 50px;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+	align-content: flex-start;
+	padding: 25px;
+}
+
+main > * {
+    box-sizing: border-box;
+    flex: 1 100%;
+}
+
+sidebar, aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+                /* SIDEBAR */
+                
+.description {
+    margin: auto;
+    display: block;
+    width: 300px;
+    background: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+                /* MAIN SECTION */
+                
+article {
+    margin: auto;
+    display: block;
+    background: #fff;
+    padding: 40px;
+}
+
+                /* MEDIA QUERIES */
+                
+@media all and (min-width: 850px) {
+  .aside { flex: 1 auto; }
+  article { box-sizing: border-box; width: 540px; }
+}
+
+@media all and (min-width: 1380px) {
+
+/* This manages the order of the two sets of sidebars and main content for desktops. Feel free to switch the order around! */    
+    
+  sidebar { order: 1; }
+  section { order: 2; flex: 3 0px; }
+  aside { order: 3; }
+  sidebar, aside { max-height: 100vh; }
+}
+
+@media all and (min-width: 1560px) {
+    article { width: 700px; }
+}
+
+
+
+        </style>
+    
+    </head>
+    <body>
+        <header> 
+            Header 
+        </header>
+        
+            <main>
+                <section>
+                    <article>
+                        <h1>Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae nunc augue. Cras ullamcorper odio purus, id egestas mi porttitor sit amet. Duis fringilla justo purus, rutrum facilisis urna elementum et. Duis finibus lectus vitae dui pharetra cursus. Sed congue sapien sed diam dignissim, a placerat nibh dignissim. Curabitur massa nisl, euismod quis nisi quis, porta lobortis arcu. Nunc ac lacinia nunc. Nam sed nunc massa. Proin aliquet sapien eu tortor sollicitudin euismod. Nulla ut tristique mi. Nullam suscipit neque et neque volutpat fermentum. Cras id metus eget elit laoreet sagittis. Etiam in fringilla lorem. Donec sollicitudin, lorem eget laoreet eleifend, nisi sapien lobortis turpis, id faucibus dolor dolor id magna. Integer ac rhoncus tellus, a tincidunt purus.
+</p><p>
+Morbi fermentum risus augue, nec condimentum orci elementum vitae. Donec porta nisi velit, vel tempor odio congue ac. Vestibulum sapien dui, luctus vel vulputate non, pretium et libero. Cras consequat augue sapien, ut pretium quam laoreet vel. Donec rhoncus vel metus eget vehicula. Etiam iaculis, mauris quis volutpat tincidunt, augue ex molestie ante, sed posuere diam massa sed risus. Praesent et orci neque. Sed lectus augue, ornare ac pellentesque vitae, venenatis at enim.
+</p><p>
+Nulla ex nisl, pretium sit amet diam a, iaculis pulvinar libero. Phasellus luctus, justo ut sodales viverra, elit libero porttitor orci, sed facilisis enim dolor et turpis. Fusce accumsan tempus pulvinar. Pellentesque ornare massa justo, sit amet imperdiet libero placerat sit amet. Aliquam auctor rhoncus risus, quis tristique quam rutrum non. Mauris sed rhoncus urna, sed auctor velit. Vestibulum eu ante eget dui sagittis dapibus.
+</p><p>
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc imperdiet ornare orci ut molestie. Nullam feugiat mattis erat. Morbi sed facilisis urna. Suspendisse id augue vitae nunc aliquam efficitur. Nunc mi eros, efficitur vel dolor id, maximus molestie sapien. Morbi convallis lacus ligula, eget luctus nisi bibendum in. Pellentesque neque erat, volutpat at varius ac, blandit vitae erat. In nisl lectus, tristique sed turpis ac, accumsan elementum est. In hac habitasse platea dictumst. Curabitur vulputate fermentum nunc, eget tempor diam aliquet quis. Pellentesque neque lorem, imperdiet in eleifend non, rutrum et metus.
+</p><p>
+Nunc vel urna finibus, efficitur lacus sit amet, lacinia orci. Donec ligula ligula, tempor at velit et, scelerisque porta nibh. Cras bibendum justo eget sodales placerat. Quisque lobortis metus arcu, vestibulum vulputate velit varius id. Cras non commodo sem, sit amet laoreet odio. Mauris in elementum sem. Cras lacinia ex ullamcorper ex tristique auctor. Ut porttitor viverra enim non laoreet.
+</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae nunc augue. Cras ullamcorper odio purus, id egestas mi porttitor sit amet. Duis fringilla justo purus, rutrum facilisis urna elementum et. Duis finibus lectus vitae dui pharetra cursus. Sed congue sapien sed diam dignissim, a placerat nibh dignissim. Curabitur massa nisl, euismod quis nisi quis, porta lobortis arcu. Nunc ac lacinia nunc. Nam sed nunc massa. Proin aliquet sapien eu tortor sollicitudin euismod. Nulla ut tristique mi. Nullam suscipit neque et neque volutpat fermentum. Cras id metus eget elit laoreet sagittis. Etiam in fringilla lorem. Donec sollicitudin, lorem eget laoreet eleifend, nisi sapien lobortis turpis, id faucibus dolor dolor id magna. Integer ac rhoncus tellus, a tincidunt purus.
+</p><p>
+Morbi fermentum risus augue, nec condimentum orci elementum vitae. Donec porta nisi velit, vel tempor odio congue ac. Vestibulum sapien dui, luctus vel vulputate non, pretium et libero. Cras consequat augue sapien, ut pretium quam laoreet vel. Donec rhoncus vel metus eget vehicula. Etiam iaculis, mauris quis volutpat tincidunt, augue ex molestie ante, sed posuere diam massa sed risus. Praesent et orci neque. Sed lectus augue, ornare ac pellentesque vitae, venenatis at enim.
+</p><p>
+Nulla ex nisl, pretium sit amet diam a, iaculis pulvinar libero. Phasellus luctus, justo ut sodales viverra, elit libero porttitor orci, sed facilisis enim dolor et turpis. Fusce accumsan tempus pulvinar. Pellentesque ornare massa justo, sit amet imperdiet libero placerat sit amet. Aliquam auctor rhoncus risus, quis tristique quam rutrum non. Mauris sed rhoncus urna, sed auctor velit. Vestibulum eu ante eget dui sagittis dapibus.
+</p><p>
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc imperdiet ornare orci ut molestie. Nullam feugiat mattis erat. Morbi sed facilisis urna. Suspendisse id augue vitae nunc aliquam efficitur. Nunc mi eros, efficitur vel dolor id, maximus molestie sapien. Morbi convallis lacus ligula, eget luctus nisi bibendum in. Pellentesque neque erat, volutpat at varius ac, blandit vitae erat. In nisl lectus, tristique sed turpis ac, accumsan elementum est. In hac habitasse platea dictumst. Curabitur vulputate fermentum nunc, eget tempor diam aliquet quis. Pellentesque neque lorem, imperdiet in eleifend non, rutrum et metus.
+</p><p>
+Nunc vel urna finibus, efficitur lacus sit amet, lacinia orci. Donec ligula ligula, tempor at velit et, scelerisque porta nibh. Cras bibendum justo eget sodales placerat. Quisque lobortis metus arcu, vestibulum vulputate velit varius id. Cras non commodo sem, sit amet laoreet odio. Mauris in elementum sem. Cras lacinia ex ullamcorper ex tristique auctor. Ut porttitor viverra enim non laoreet. </p>          
+                    </article>
+                </section>
+                
+                <sidebar class="aside"> 
+                    <div class="description">
+                        <img src="{PortraitURL-96}" alt="icon" width="96" height="96"/> </br> </br>
+                        {Description}
+                    </div>
+                </sidebar>
+                
+                
+                <aside class="aside"> 
+                    <div class="description">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae nunc augue. Cras ullamcorper odio purus, id egestas mi porttitor sit amet. Duis fringilla justo purus, rutrum facilisis urna elementum et. Duis finibus lectus vitae dui pharetra cursus. Sed congue sapien sed diam dignissim, a placerat nibh dignissim. Curabitur massa nisl, euismod quis nisi quis, porta lobortis arcu.
+</p><p>
+Morbi fermentum risus augue, nec condimentum orci elementum vitae. Donec porta nisi velit, vel tempor odio congue ac. Vestibulum sapien dui, luctus vel vulputate non, pretium et libero. Cras consequat augue sapien, ut pretium quam laoreet vel. Donec rhoncus vel metus eget vehicula. Etiam iaculis, mauris quis volutpat tincidunt, augue ex molestie ante, sed posuere diam massa sed risus. Praesent et orci neque. Sed lectus augue, ornare ac pellentesque vitae, venenatis at enim.
+</p><p>
+                    </div>
+                </aside>
+                
+            </main>
+        <header> Footer </header>
+    </body>
+</html>
