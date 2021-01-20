@@ -1,0 +1,1312 @@
+<!doctype html>
+ 
+<!--
+    UNDEADCORVID (ᛚᛟᚲᛖ)
+    THEME 001: HYDROGEN
+    
+    01. don't redistribute
+    02. don't take snippets or steal code
+    03. don't remove my credit
+    04. editing for personal use allowed
+    05. hydrogen is not a base code
+    06. support @ undeadcorvid
+    07. i DO NOT support highly edited versions of hydrogen
+-->
+ 
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+ 
+        <!-- FONTS -->
+ 
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+ 
+        <!-- LIBRARIES -->
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<!--Jquery UI-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!--Emojione-->
+<script src="//cdn.jsdelivr.net/emojione/2.0.0/lib/js/emojione.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/2.0.0/assets/css/emojione.min.css"/>
+ 
+        <!-- META TAGS -->
+       
+        <!--Images-->
+<meta name="image:Pinned Img" content="http://static.tumblr.com/h6iabvf/MpTotsyg4/001hydrogenpreview.png"/>
+       
+        <!-- Switches & Selects -->
+<meta name="if:FAQ" content="1"/>
+<meta name="if:Pinned" content="1"/>
+<meta name="if:PinnedPhoto" content="1"/>
+<meta name="if:Info" content="1"/>
+
+ 
+<meta name="select:Menu Rows" content="120px" title="One">
+<meta name="select:Menu Rows" content="150px" title="Two">
+<meta name="select:Menu Rows" content="180px" title="Three">
+<meta name="select:Menu Rows" content="210px" title="Four">
+
+
+<meta name="if:DateUnix" content="1"/>
+ 
+        <!-- Colors -->
+<meta name="color:Background" content="#d5d5d5"/>
+ 
+<meta name="color:Font" content="#000"/>
+<meta name="color:Link Hover" content="#B6B6B6"/>
+<meta name="color:Accent" content="#760202"/>
+<meta name="color:Post" content="#f3f3f3"/>
+ 
+<meta name="color:Navigation Text" content="#e8e8e8"/>
+<meta name="color:Navigation" content="#1e1e1e"/>
+<meta name="color:Nav Button Text" content="#707070"/>
+<meta name="color:Nav Button Bckgd" content="#2f2f2f"/>
+<meta name="color:Menu Bckgd" content="#2c2c2c"/>
+ 
+<meta name="color:Footer Bckgd" content="#b14646"/>
+<meta name="color:Footer Text" content="#2d1212"/>
+<meta name="color:Footer Hover" content="#c04d4d"/>
+ 
+<meta name="text:Transparent 1" content="rgba(0,0,0,0.05)"/>
+<meta name="text:Transparent 2" content="rgba(0,0,0,0.5)"/>
+ 
+        <!-- Text -->
+<meta name="text:FAQ Title" content="FAQ"/>
+<meta name="text:FAQ Text" content="Here's where your FAQ goes. It shows up in your /ask and /submit pages"/>
+ 
+<meta name="text:Sidebar Subtitle" content="Hey, didn't you know?"/>
+<meta name="text:URL" content="URL"/>
+ 
+<meta name="text:Pinned Title" content="Pinned Title"/>
+<meta name="text:Pinned Text" content="Pinned Text"/>
+<meta name="text:Pinned Post ID" content="Pinned Post ID"/>
+ 
+<meta name="text:Quote Hover" content="Refresh to read more of my nonsense"/>
+ 
+<meta name="text:Info 1 Icon" content=""/>
+<meta name="text:Info 1 Full" content="Name"/>
+<meta name="text:Info 1 Sub" content="Nickname"/>
+ 
+<meta name="text:Info 2 Icon" content=""/>
+<meta name="text:Info 2 Full" content="Country"/>
+<meta name="text:Info 2 Sub" content="Timezone"/>
+ 
+<meta name="text:Info 3 Icon" content=""/>
+<meta name="text:Info 3 Full" content="DOB"/>
+<meta name="text:Info 3 Sub" content="Age"/>
+ 
+<meta name="text:Info 4 Icon" content=""/>
+<meta name="text:Info 4 Full" content="Gender"/>
+<meta name="text:Info 4 Sub" content="Pronouns"/>
+ 
+<style type="text/css">
+   
+        /* COMPATABILITY AND PLUGIN SETTINGS */
+body, html {
+    margin: 0;
+    }
+    
+img.emojione {  
+margin: 0px !important;
+display: inline !important;
+vertical-align: middle;
+    }
+ 
+.photos img {
+    width: 100%;
+    height: auto;
+}
+ 
+.caption img {
+    max-width: 500px;
+    height: auto;
+}
+
+blockquote img {
+    max-width: 100%!important;
+    height: 100%;
+}
+
+.lightbox-image, #tumblr_lightbox img {
+    width: 100%;
+}
+   
+#tumblr_controls, .tmblr-iframe {
+    z-index:999999999999999999!important;
+    -webkit-filter:invert(100%);
+    -moz-filter:invert(100%);
+    -o-filter:invert(100%);
+    -ms-filter:invert(100%);
+    filter:invert(100%);
+    position:fixed!important;
+    right:20px!important;
+    top:60px!important;
+    opacity:.5;
+    -webkit-transition:all 0.6s ease-out;
+    -webkit-transition: opacity 0.7s linear;
+    opacity: 0.2;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out
+}
+
+#tumblr_controls, .tmblr-iframe:hover {
+    opacity:.9;
+    webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-transition:all 0.6s ease-out;
+    -webkit-filter:invert(80%);
+    -moz-filter:invert(80%);
+    -o-filter:invert(80%);
+    -ms-filter:invert(80%);
+    filter:invert(80%);
+}
+ 
+.spotify_audio_player {
+     height: 80px !important;
+}
+ 
+        /* SCROLLBAR AND TOOLTIPS */
+       
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: {color:Footer Bckgd};
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: {color:Footer Hover};
+}
+::-webkit-scrollbar-thumb:active {
+  background: {color:Footer Hover};
+}
+::-webkit-scrollbar-track {
+  background: {color:Navigation};
+  border-radius: 50px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+ 
+.mytooltip {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0)!important;
+    color: {color:Navigation Text}!important;
+    background-color: {color:Navigation}!important;
+    border: none!important;
+    font-family: 'Lato', sans-serif!important;
+    font-weight: 300!important;
+    margin: 10px;
+  }
+   
+        /* BASICS */
+   
+body {
+    background-color: {color:Background};
+    color: {color:Font};
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+a {
+    color: {color:Accent};
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    transition: all 250ms ease-in-out;
+    }
+a:hover {
+    color: {color:Link Hover};
+    border-bottom: 1px solid {color:Accent};
+    }
+ 
+h1 {
+    color: {color:Accent};
+    font-size: 24px;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 300px;
+    margin: 10px;
+    padding: 0;
+    }
+h2 {
+    color: {color:Accent};
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300px;
+    margin: 0;
+    padding: 0px;
+    }
+h3 {
+    color: {color:Navigation Text};
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300px;
+    padding: 0px;
+    }
+   
+code {
+    display: block;
+    border-top: {color:Accent} 4px solid;
+    background-color: {color:Navigation};
+    color: {color:Navigation Text};
+    padding: 20px;
+    max-height: 150px;
+    overflow-y: scroll;
+    width: 460px;
+}
+ 
+        /* NAVIGATION */
+   
+nav {
+    width: 100vw;
+    position: fixed;
+    border-top: {color:Accent} 4px solid;
+    background-color: {color:Navigation};
+    padding: 5px;
+    margin: 0;
+    height: 40px;
+    z-index: 3;
+}
+.navtitle {
+    position:absolute;
+    font-size: 20px;
+    color: {color:Navigation Text};
+    margin: 9px;
+    font-weight: 300;
+    text-transform: uppercase;
+    }
+   
+nav ul {
+    list-style: none;
+    margin: 0 30px;
+    padding: 0;
+    float: right;
+}
+nav li {
+    display: inline-block;
+    margin: 0 0px;
+    transition: all 0.3s;
+    transform: skewX(-20deg);
+}
+nav a {
+    display: block;
+    padding: 10px 20px;
+    color: {color:Nav Button Text};
+    background-color: {color:Nav Button Bckgd};
+    height: 20px;
+    font-family: Linearicons-Free;
+    line-height: 20px;
+}
+nav a:hover {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+nav span {
+    display: block;
+    transform: skewX(20deg);
+}
+   
+        /* NAVIGATION MENU */
+   
+.menu {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 0px;
+    background-color: {color:Menu Bckgd};
+    color: {color:Navigation Text};
+    margin: 54px 0;
+    transition-duration: 1s;
+    overflow: hidden;
+    z-index: 2;
+    border-top: rgba(0,0,0,0) 1px solid;
+    }  
+.menu-show {
+    height: {select:Menu Rows};
+    border-top: #5b5b5b 1px solid;
+    }
+.button-open {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+.toggle-button {
+    cursor: pointer;
+}
+.links {
+    text-align: center;
+    }
+   
+.links a {
+    display: inline-block;
+    margin: 0px 4px;
+    padding: 7px 10px;
+    border-bottom: 2px solid {color:Menu Bckgd};
+    transition: all 250ms ease-in-out;
+    text-transform: uppercase;
+    color: {color:Navigation Text};
+    }
+.links a:hover {
+    color: {color:Link Hover};
+    border-bottom: 2px solid {color:Accent};
+    }
+   
+        /* MAIN BLOG CONTENT */
+       
+.content {
+    position: absolute;
+    margin: 100px 750px;
+    width: 500px;
+    }  
+ 
+.pagination {
+    margin: 20px 0;
+    width: 540px;
+    background-color: {color:Navigation};
+    border-top: {color:Accent} 2px solid;
+    text-align: center;
+    padding: 10px 0px;
+    }
+   
+.pagination ul {
+    list-style: none;
+    margin: 0 30px;
+    padding: 0;
+}
+.pagination li {
+    display: inline-block;
+    margin: 0 0px;
+    transition: all 0.3s;
+    transform: skewX(-20deg);
+}
+.pagination a {
+    display: block;
+    padding: 5px 10px;
+    color: {color:Nav Button Text};
+    background-color: {color:Nav Button Bckgd};
+    height: 10px;
+    line-height: 10px;
+}
+.pagination a:hover {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+.pagination span {
+    display: block;
+    transform: skewX(20deg);
+}
+ 
+.pagination .lin {
+    font-family: Linearicons-Free;
+    line-height: 10px;
+}
+ 
+.pagination .current {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+ 
+        /* SIDEBAR*/
+     
+.sidecenter {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 100vh;
+}
+ 
+.maintitle {
+    color: {color:Accent};
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300px;
+    margin: 0px;
+    padding: 0;
+}
+ 
+.subtitle {
+    margin-top: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+ 
+.description {
+    margin: 10px auto;
+    display: block;
+    width: 300px;
+    max-height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+       
+.floater {
+    margin: 0px 0px 0px -10px;
+    clear: both;
+    width: 440px;
+    height: 110px;
+    display: block;
+}
+ 
+.shape {
+    position: absolute;
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 0px 180px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+ 
+.right {
+    float: right;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    padding: 0px 10px 5px 5px;
+    margin-top: -3px;
+}
+ 
+.right span {
+    margin: 5px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 20px;
+}
+ 
+.right b {
+    background-color: {text:Transparent 1};
+    padding: 4px;
+    font-weight: 300;
+    border-radius: 30px;
+    font-family: Linearicons-Free;
+    font-size: 15px;
+    line-height: 20px;
+    width: 20px;
+}
+ 
+.right i {
+    color: {text:Transparent 2};
+    font-weight: 300;
+    text-transform: lowercase;
+}
+ 
+.left {
+    float: left;
+    width: 150px;
+    height: 90px;
+    overflow: hidden;
+    border-right: 1px solid {text:Transparent 1};
+    padding: 5px 10px 5px 5px;
+    margin-top: 2px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+ 
+.leftinsert {
+    text-align: right;
+}
+ 
+.leftinsert a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    transition: all 250ms ease-in-out;
+    color: {color:Font};
+    }
+   
+        /* POSTS */
+.post {
+    margin: 20px 0;
+    width: 540px;
+    background-color: {color:Post};
+    border-top: {color:Accent} 2px solid;
+    }
+   
+.caption {
+    padding: 20px 20px;
+}
+ 
+blockquote {
+    display: block;
+    border-left: 1px solid {color:Accent};
+    padding-left: 10px;
+    overflow-x: hidden;
+}
+ 
+.posttype {
+    background-color: {color:Post};
+    border: 1px solid {color:Accent};
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin: -15px -10px;
+    padding: 3px;
+}
+ 
+.answer, .link {
+    background-color: {color:Navigation}!important;
+}
+ 
+.answer:after, .link:after {
+    color: {color:Nav Button Text};
+}
+ 
+.pinned {
+    background-color: #2d1212;!important;
+}
+ 
+.pinned:after {
+    color: #b14646!important;
+}
+ 
+ 
+.answer:after, .video:after, .audio:after, .chat:after, .link:after, .quote:after, .photo:after, .text:after, .pinned:after {
+    font-family: Linearicons-Free;
+    font-size: 20px;
+    display: block;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+}
+ 
+.answer:after { content: '';}
+.video:after { content: '';}
+.audio:after {content: '';}
+.chat:after {content: '';}
+.link:after {content: '';}
+.quote:after {content: '';}
+.photo:after {content: '';}
+.text:after {content: '';}
+.pinned:after {content: '';}
+ 
+.header {
+    position: relative;
+    display: block;
+    width: 540px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+ 
+.time-ago {
+    margin: 0px 3px;
+    padding: 0px 3px;
+    display:inline-block;
+    border-left: 1px solid {text:Transparent 1};
+}
+ 
+/* Quotes */
+ 
+.quotepost:before {
+    font-family: 'Gloria Hallelujah', cursive;
+    content:'"';   
+    color: {color:Accent};
+    text-transform: uppercase;
+    padding: 0;
+}
+ 
+.quotepost:after {
+    font-family: 'Gloria Hallelujah', cursive;
+    content:'"';   
+    color: {color:Accent};
+    text-transform: uppercase;
+    padding: 0;
+}
+ 
+.quotepost {
+    background-color: {text:Transparent 1};
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 22px;
+}
+ 
+.source {
+    margin: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+ 
+.source:before {
+    content: '-';
+}
+ 
+/* Link */
+ 
+.linkpost {
+    width: 530px;
+    background-color: {color:Navigation};
+    padding: 5px;
+    margin: 0;
+    color: {color:Nav Button Text};
+    text-align: center;
+}
+ 
+.linkpost a {
+    padding: 10px;
+    display: block;
+    color: {color:Nav Button Text};
+    background-color: {color:Nav Button Bckgd};
+    transform: skewX(-20deg);
+    max-width: 450px;
+    margin: auto;
+}
+ 
+.linkpost a:hover {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+.linkpost span {
+    display: block;
+    transform: skewX(20deg);
+    font-size: 20px;
+}
+ 
+.linkpostflex {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+ 
+.linkpostinfo {
+    flex-grow: 1;
+    font-size:12px;
+}
+ 
+.linkpostinfo a {
+    background: none;
+    height: auto;
+    width: auto;
+}
+ 
+/* Chat */
+ 
+.chatpost {
+    padding: 5px;
+    font-weight: 300;
+}
+ 
+.chatpost b {
+    text-transform: uppercase;
+}
+ 
+.odd {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+ 
+.even {
+    color: {color:Nav Button Text};
+    background-color: {color:Nav Button Bckgd};
+}
+ 
+/* Audio */
+ 
+.audiocircle {
+    margin: 50px 100px;
+    position: absolute;
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    background: {color:Post};
+}
+ 
+.audiowrapper {
+    margin: 10px 7px;
+    position: relative;
+    width: 35px;
+    height: 27px;
+    overflow: hidden;
+}
+ 
+.audioart {
+    margin-left: 50px;
+    height: 150px;
+    width: 150px;
+    display: block;
+    background: url('http://static.tumblr.com/h6iabvf/NJWotm6mu/audio.png');
+    float: left;
+}
+ 
+.audioart img {
+    width: 150px;
+    height: 150px;
+}
+ 
+.audioinfo {
+    margin-top: 20px;
+    float: right;
+    width: 250px;
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid  {text:Transparent 1};
+}
+ 
+.audioinfo span {
+    display: block;
+    line-height: 23px;
+}
+ 
+.audioinfo b {
+    background-color: {text:Transparent 1};
+    padding: 4px;
+    font-weight: 300;
+    border-radius: 10px;
+   
+}
+ 
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  margin-top: 20px;
+}
+ 
+/* Video */
+ 
+.videopost {
+    width: 500px;
+    margin: 20px 20px 0px 20px;
+}
+ 
+/* Ask */
+ 
+.askpost {
+    width: 530px;
+    background-color: {color:Navigation};
+    padding: 5px;
+    margin: 0;
+    color: {color:Nav Button Text};
+    text-align: center;
+}
+ 
+.askpost a {
+    padding: 10px;
+    display: block;
+    color: {color:Nav Button Text};
+    background-color: {color:Nav Button Bckgd};
+    transform: skewX(-20deg);
+    max-width: 450px;
+    margin: auto;
+}
+ 
+.askpost a:hover {
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+}
+.askpost span {
+    display: block;
+    transform: skewX(20deg);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+ 
+.askpostflex {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+ 
+.askpostinfo {
+    flex-grow: 1;
+    font-size:12px;
+    text-align: center;
+}
+ 
+.askpostinfo a {
+    background: none;
+    height: 10px;
+    width: auto;
+    transform: skewx(-20deg);
+    border-bottom: 0px rgba(0,0,0,0);
+}
+ 
+.askpostinfo a:hover {
+    background-color: {color:Navigation};
+    color: {color:Nav Button Text};
+}
+.askerportrait {
+    position: absolute;
+    margin: -30px 0px;
+    border-radius: 20px;
+}
+.askerbubble {
+    position: absolute;
+    font-family: Linearicons-Free;
+    font-size: 20px;
+}
+   
+        /* POST FOOTER */
+   
+.postfooter {
+    max-width: 540px;
+    display: block;
+    color: {color:Footer Bckgd};
+    background-color: {color:Footer Text};
+    padding: 5px;
+}
+ 
+.footerflex {
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+ 
+.footerinfo {
+    flex-grow: 1;
+    font-size:20px;
+    text-align: center;
+    font-family: Linearicons-Free;
+}
+ 
+.footerinfo a {
+    border-bottom: 0px rgba(0,0,0,0);
+    color: {color:Footer Bckgd};
+}
+ 
+.footerinfo a:hover {
+    color: {color:Footer Hover};
+}
+ 
+.like-b {
+  position:relative;
+  display:inline-block;
+  height:1em;
+  line-height:1em;
+  overflow:hidden;
+  margin-bottom:-1px;
+}
+.like-b .like_button iframe {
+   position:absolute;
+   top:0;
+   left:0;
+   bottom:0;
+   right:0;
+   z-index:2;
+   opacity:0;
+}
+.like-b .liked + .b {
+  color: rgba(255,255,255,0.6);
+}
+ 
+.posttags {
+    text-align: center;
+    font-weight: 300;
+    padding: 10px;
+    margin: 10px 10px 30px 10px;
+    opacity: 0.5;
+    -webkit-transition:all 0.6s ease-out;
+    -webkit-transition: opacity 0.7s linear;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    padding-bottom: 10px;
+    border-bottom: 1px solid {text:Transparent 1};
+}
+ 
+.posttags:hover {
+    opacity: 1;
+}
+ 
+.posttags a {
+    margin: 5px;
+    color: {color:Nav Button Text};
+}
+ 
+.posttags a:hover {
+    color: {color:Nav Button Bckgd};
+}
+ 
+.posttags a:before {
+    content:'#';
+    font-weight: 400;
+    margin-right: 3px;
+    color: {color:Footer Text};
+}
+ 
+        /* POST NOTES */
+       
+ol.notes {
+    padding: 20px;
+    margin: 10px 0;
+    width: 500px;
+    background-color: {color:Post};
+    border-top: {color:Accent} 2px solid;
+    list-style: none;
+}
+ 
+ol.notes li.note {
+    padding: 3px;
+}
+ 
+ol.notes li.note img {
+    padding:0 px !important;
+}
+ 
+ol.notes li.note img.avatar {
+    border: 1px solid {color:Accent};
+    padding: 2px;
+    border-radius: 16px;
+    margin: 10px 5px 0px 0px;
+    width:16px;
+    height:16px;
+}
+ 
+ol.notes li.note span.action {
+    font-weight:bold;
+    position: absolute;
+    margin: 10px 0px 0px 0px;
+}
+ 
+        /* CREDITS: DO NOT REMOVE */
+ 
+.credit {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 50;
+}
+ 
+.credit a {
+    border: 1px solid {color:Accent};
+    color: {color:Accent};
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+}
+ 
+.credit a:hover {
+    text-shadow: 0px 0px 2px rgba(204, 0, 0, 1);
+    box-shadow: 0px 0px 2px rgba(204, 0, 0, 1);
+}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+    <div class="credit">
+        <a href="http://undeadcorvid.tumblr.com/" title="undeadcorvid">ᛚᛟᚲᛖ</a>
+    </div>
+    <nav>
+        <div class="navtitle">
+            {text:URL}
+        </div>
+        <ul>
+            <li>
+                <a href="/" title="{lang:Home}"><span></span></a>
+            </li>
+            <li style="list-style: none">{block:AskEnabled}</li>
+            <li>
+                <a href="/ask" title="Ask"><span></span></a>
+            </li>
+            <li style="list-style: none">{/block:AskEnabled} {block:SubmissionsEnabled}</li>
+            <li>
+                <a href="/submit" title="Submit"><span></span></a>
+            </li>
+            <li style="list-style: none">{/block:SubmissionsEnabled}</li>
+            <li>
+                <a href="/archive" title="{lang:Archive}"><span></span></a>
+            </li>
+            <li style="list-style: none">{block:HasPages}</li>
+            <li>
+                <a class="toggle-button" href="#" title="{lang:Navigation}"><span></span></a>
+            </li>
+            <li style="list-style: none">{/block:HasPages}</li>
+        </ul>
+    </nav>
+    <div class="menu">
+        <div class="links">
+            <h3>{lang:Navigate}</h3>{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}
+        </div>
+    </div>
+    <div class="sidecenter">
+        <div class="sidebar">
+            {block:IfInfo}
+            <div class="floater">
+                <div class="left">
+                    <div class="leftinsert">
+                        <a title="{text:Quote Hover}"><span class="myquote"></span>.</a>
+                    </div>
+                </div>
+                <div class="shape"><img src="{PortraitURL-96}"></div>
+                <div class="right">
+                    <span><b>{text:Info 1 Icon}</b> {text:Info 1 Full} <i>{text:Info 1 Sub}</i></span> <span>&nbsp;&nbsp;&nbsp;&nbsp;<b>{text:Info 2 Icon}</b> {text:Info 2 Full} <i>{text:Info 2 Sub}</i></span> <span>&nbsp;&nbsp;&nbsp;&nbsp;<b>{text:Info 3 Icon}</b> {text:Info 3 Full} <i>{text:Info 3 Sub}</i></span> <span><b>{text:Info 4 Icon}</b> {text:Info 4 Full} <i>{text:Info 4 Sub}</i></span>
+                </div>
+            </div>{/block:IfInfo}
+            <div class="subtitle">
+                {text:Sidebar Subtitle}
+            </div>
+            <div class="maintitle">
+                {Title}
+            </div>
+            <div class="description">
+                {Description}
+                </br></br>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        {block:IfPinned} {block:IndexPage}
+        <div class="post">
+            <div class="posttype pinned"></div>
+                {block:IfPinnedPhoto}<div class="photos"><img src="{image:Pinned Img}"></div>{/block:IfPinnedPhoto}
+            <div class="caption">
+                <h1>{text:Pinned Title}</h1>{text:Pinned Text}
+            </div>
+            <div class="postfooter">
+                <div class="footerflex">
+                    <div class="footerinfo"></div>
+                    <div class="footerinfo">
+                        <a href="/post/{text:Pinned Post ID}" title="Post"></a>
+                    </div>
+                    <div class="footerinfo"></div>
+                </div>
+            </div>
+        </div>{block:IndexPage} {/block:IfPinned} {block:Posts} {block:Date}
+        <div class="header">
+            {block:RebloggedFrom}reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a> on {/block:RebloggedFrom} <a href="">{DayOfMonthWithZero}.{MonthNumberWithZero}.{ShortYear}</a>
+            
+            {block:IfDateUnix} 
+                <div class="time-ago">
+                    {TimeStamp}
+                </div>
+            {/block:IfDateUnix} 
+        </div>{/block:Date}
+        <div class="post" id="{PostID}">
+            <div class="posttype {PostType}"></div>{block:IfFAQ} {block:AskPage}
+            <div class="caption">
+                <h1>FAQ</h1>{text:FAQ Text}
+            </div>{/block:AskPage} {block:SubmitPage}
+            <div class="caption">
+                <h1>{text:FAQ Title}</h1>{text:FAQ Text}
+            </div>{/block:SubmitPage} {/block:IfFAQ} <!-- TEXT POSTS -->
+             {block:Text}
+            <div class="caption">
+                {block:Title}
+                <h1>{Title}</h1>{/block:Title} {Body}
+            </div>{/block:Text} <!-- PHOTO POSTS -->
+             {block:Photo}
+            <div class="photos"><img alt="{PhotoAlt}" src="{PhotoURL-HighRes}"></div>{block:Caption}
+            <div class="caption">
+                {Caption}
+            </div>{/block:Caption} {/block:Photo} <!-- PHOTOSET POSTS -->
+             {Block:Photoset} {Photoset} {block:Caption}
+            <div class="caption">
+                {Caption}
+            </div>{/block:Caption} {/block:Photoset} <!-- QUOTE POSTS -->
+             {Block:Quote}
+            <div class="caption">
+                <div class="quotepost">
+                    {Quote}
+                </div>
+                <div class="source">
+                    {block:Source}{Source}{/block:Source}
+                </div>
+            </div>{/Block:Quote} <!-- LINK POSTS -->
+             {Block:Link}
+            <div class="linkpost">
+                <a href="{URL}"><span>{Name}</span></a>
+                <div class="linkpostflex">
+                    <div class="linkpostinfo"></div>
+                    <div class="linkpostinfo">
+                        {block:Host}{Host}{/block:Host}
+                    </div>
+                    <div class="linkpostinfo">
+                        {block:Author}{Author}{/block:Author}
+                    </div>
+                    <div class="linkpostinfo"></div>
+                </div>
+            </div>
+            <div class="caption">
+                {block:Description}{Description}{/block:Description}
+            </div>{/Block:Link} <!-- CHAT POSTS -->
+             {block:Chat}
+            <div class="caption">
+                {block:Title}
+                <h1>{Title}</h1>{/block:Title} {block:Lines}
+                <div class="chatpost {Alt}">
+                    <b>{block:Label}{Label}{/block:Label}</b> {Line}
+                </div>{/block:Lines}
+            </div>{/block:Chat} <!-- AUDIO POSTS --> {block:Audio} {block:AudioPlayer}
+            <div class="group">
+                <div class="audioart">
+                    {block:AlbumArt}<img src="{AlbumArtURL}">{/block:AlbumArt}
+                </div>
+                <div class="audiocircle">
+                    <div class="audiowrapper">
+                        {AudioPlayer}
+                    </div>
+                </div>
+                <div class="audioinfo">
+                    <span><b>Track</b> {block:TrackName}{TrackName}{/block:TrackName}</span> <span><b>Artist</b> {block:Artist}{Artist}{/block:Artist}</span> <span><b>Album</b> {block:Album}{Album}{/block:Album}</span>
+                </div>
+            </div>{/block:AudioPlayer} {block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+            <div class="caption">
+                {block:Caption} {Caption} {/block:Caption}
+            </div>{/block:Audio} <!-- VIDEO POSTS --> {block:Video}
+            <div class="videopost">
+                {VideoEmbed-500}
+            </div>
+            <div class="caption">
+                {block:Caption} {Caption} {/block:Caption}
+            </div>{/block:Video} {block:Answer}
+            <div class="askpost">
+                <a href="{Permalink}"><span>{Question}</span></a>
+                <div class="askpostflex">
+                    <div class="askpostinfo"></div>
+                    <div class="askpostinfo"></div>
+                    <div class="askpostinfo">
+                        {Asker}
+                    </div>
+                    <div class="askpostinfo"><img class="askerportrait" src="{AskerPortraitURL-40}"></div>
+                </div>
+            </div>
+            <div class="caption">
+                {Answer}
+            </div>{/block:Answer} {block:Date}
+            <div class="postfooter">
+                <div class="footerflex">
+                    <div class="footerinfo"></div>
+                    <div class="footerinfo">
+                        <a href="{Permalink}" title="Post"></a>
+                    </div>
+                    <div class="footerinfo">
+                        <a href="{Permalink}" title="{NoteCountWithLabel}"></a>
+                    </div>
+                    <div class="footerinfo">
+                        <a href="{ReblogURL}" target="_blank" title="Reblog"></a>
+                    </div>
+                    <div class="footerinfo">
+                        <a class="like-b" href="#" title="Like">{LikeButton}<span class="b"></span></a>
+                    </div>
+                    <div class="footerinfo"></div>
+                </div>
+            </div>{/block:Date}
+        </div>{block:HasTags}
+        <div class="posttags">
+            {block:Tags} <a href="{TagURL}">{Tag}</a> {/block:Tags}
+        </div>{/block:HasTags}
+        <div class="notes">
+            {block:PostNotes}<a id="notes" name="notes">{PostNotes}</a>{/block:PostNotes}
+        </div>{/block:Posts} {block:Pagination}
+        <div class="pagination">
+            <ul>
+                <li style="list-style: none">{block:PreviousPage}</li>
+                <li>
+                    <a class="lin" href="{PreviousPage}" title="previous"><span></span></a>
+                </li>
+                <li style="list-style: none">{/block:PreviousPage} {block:JumpPagination length="5"} {block:CurrentPage}</li>
+                <li>
+                    <a class="current" href="{URL}"><span>{PageNumber}</span></a>
+                </li>
+                <li style="list-style: none">{/block:CurrentPage} {block:JumpPage}</li>
+                <li>
+                    <a href="{URL}"><span>{PageNumber}</span></a>
+                </li>
+                <li style="list-style: none">{/block:JumpPage} {/block:JumpPagination} {block:NextPage}</li>
+                <li>
+                    <a class="lin" href="{NextPage}" title="next"><span></span></a>
+                </li>
+                <li style="list-style: none">{/block:NextPage}</li>
+            </ul>
+        </div>{/block:Pagination}
+    </div>
+</body>
+                           
+    <!-- TOOLTIP -->
+ <script>
+        $(document).ready(function() {
+           $( document ).tooltip({
+            track: true,
+            tooltipClass: "mytooltip",
+        });
+    });
+ </script>
+ 
+    <!-- RANDOM QUOTE-->       
+<script>
+$(function(){
+      var myQuotes = new Array();
+      myQuotes[0] = "I can't believe this URL was free";
+      var myRandom = Math.floor(Math.random()*myQuotes.length);
+      $('.myquote').html(myQuotes[myRandom]);
+   });
+</script>
+   
+    <!-- EMOJIONE -->
+<script>
+$(window).load(function(){
+function convert() {
+    var input = document.body.innerHTML;
+    var output = emojione.unicodeToImage(input);
+    document.body.innerHTML = output;
+  }
+convert();
+});
+</script>
+
+    <!-- TIME AGO -->
+<script src="http://static.tumblr.com/i5s2zks/9Acok8oo2/bct-timeago.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".time-ago").timeAgo({
+        time: "letter", // can be "letter" "short" or "word"
+        spaces: false, // adds spaces between words and numbers
+        words: false, // turns numbers to words
+        prefix: "~ ", // adds a prefix to the outputted string. could be "~" or "about"
+        suffix: " ago", // adds a suffix to the outputted string. could be "ago"
+    });
+});
+</script>
+ 
+    <!-- SLIDEOUT MENU -->
+<script>
+$(document).ready(function() {
+    var $toggleButton = $('.toggle-button'),
+        $menuWrap = $('.menu');
+ 
+    $toggleButton.on('click', function() {
+        $(this).toggleClass('button-open');
+        $menuWrap.toggleClass('menu-show');
+    });
+});
+    </script>
+</html>
